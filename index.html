@@ -7,6 +7,14 @@
 <meta name="description" content="Oussama Ghazouani — Full Stack Software Engineer (Java/Spring Boot, Angular, React, Python/FastAPI) building SaaS platforms and LLM/RAG-powered features. Based in Tunis, open to hybrid and remote roles.">
 <meta property="og:title" content="Oussama Ghazouani — Full Stack Software Engineer">
 <meta property="og:description" content="Java · Spring Boot · Angular · React · Python · FastAPI · LLM & RAG. Open to opportunities.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://oussemaghazouani.github.io/">
+<meta property="og:image" content="https://oussemaghazouani.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07101f">
+<link rel="canonical" href="https://oussemaghazouani.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2314b8a6'/%3E%3Cstop offset='1' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EOG%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Oussama Ghazouani","jobTitle":"Full Stack Software Engineer","url":"https://oussemaghazouani.github.io/","image":"https://oussemaghazouani.github.io/photo.jpg","email":"mailto:oussamaghazouani95@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Tunis","addressCountry":"TN"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"ESPRIT"},{"@type":"CollegeOrUniversity","name":"University of Monastir"}],"knowsAbout":["Java","Spring Boot","Angular","React","Python","FastAPI","Microservices","LLM","RAG","NLP","Docker"],"sameAs":["https://www.linkedin.com/in/oussama-ghazouani/","https://github.com/oussemaghazouani"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -144,6 +152,40 @@ h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.025em;line-height:1.15;marg
 .copy{background:none;border:0;color:var(--dim);font:500 12px Inter,sans-serif;cursor:pointer;margin-left:6px}
 footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
 
+/* photo card */
+.pcard{position:relative;max-width:360px;justify-self:end;width:100%}
+.pcard .ph{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:1/1.08;background:#0d1b33;box-shadow:0 40px 90px -35px rgba(0,0,0,.8)}
+.pcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.pcard .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,16,31,.92))}
+.pcard .cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
+.pcard .cap b{display:block;font-size:18px}
+.pcard .cap span{font-size:13.5px;color:#cbd5e1}
+.pcard .ring{position:absolute;inset:-14px;border-radius:30px;border:1px dashed rgba(94,234,212,.25);z-index:-1}
+.float{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(13,27,51,.92);backdrop-filter:blur(8px);border:1px solid var(--line2);border-radius:12px;padding:10px 14px;font-size:13px;box-shadow:0 18px 40px -18px rgba(0,0,0,.8);z-index:3}
+.float i{font-style:normal;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:rgba(94,234,212,.12);color:var(--teal);font-weight:800;font-size:12px}
+.float b{display:block;font-size:13.5px}.float span{color:var(--muted);font-size:12px}
+.f1{top:28px;left:-46px}.f2{bottom:96px;right:-36px}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.about p.txt{color:#cbd5e1;font-size:16.5px;margin-bottom:14px}
+.vals{display:grid;gap:14px;margin-top:22px}
+.val{display:flex;gap:14px;border:1px solid var(--line);background:rgba(15,31,58,.55);border-radius:var(--r);padding:16px 18px}
+.val i{font-style:normal;flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(94,234,212,.1);color:var(--teal)}
+.val i svg{width:19px;height:19px}
+.val b{display:block;font-size:15px;margin-bottom:2px}
+.val span{color:var(--muted);font-size:14px}
+.code{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--teal);margin-top:4px}
+.code:hover{text-decoration:underline}
+.skip{position:absolute;left:-999px;top:8px;background:var(--teal);color:#042f2e;padding:8px 12px;border-radius:8px;z-index:50}
+.skip:focus{left:8px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:8px}
+.icon-btn{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--line2);border-radius:8px;color:var(--text)}
+.icon-btn:hover{border-color:var(--teal);color:var(--teal)}
+.icon-btn svg{width:18px;height:18px}
+.flinks{display:flex;gap:18px;justify-content:center;margin-bottom:10px}
+.flinks a:hover{color:var(--teal)}
+@media (max-width:960px){.pcard{justify-self:center;max-width:340px}.f1{left:-10px}.f2{right:-10px}.about{grid-template-columns:1fr}}
+
 .reveal{opacity:0;transform:translateY(14px);transition:.6s ease}
 .reveal.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.status b{animation:none}}
@@ -159,15 +201,18 @@ footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
 </head>
 <body>
 
+<a class="skip" href="#top">Skip to content</a>
 <nav><div class="wrap">
   <a href="#top" class="logo"><i>OG</i>Oussama Ghazouani</a>
   <div class="links">
+    <a href="#about" data-i="nav.about">About</a>
     <a href="#projects" data-i="nav.projects">Projects</a>
     <a href="#experience" data-i="nav.exp">Experience</a>
     <a href="#skills" data-i="nav.skills">Skills</a>
     <a href="#certs" data-i="nav.certs">Certifications</a>
   </div>
   <div class="navr">
+    <a class="icon-btn" href="https://github.com/oussemaghazouani" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.690-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.770 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
     <button class="lang" id="lang" type="button" aria-label="Switch language">FR</button>
     <a class="btn p" href="#contact" data-i="nav.hire">Contact me</a>
   </div>
@@ -185,12 +230,42 @@ footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           <span data-i="cta.mail">Email me</span></a>
         <a class="btn s" href="https://www.linkedin.com/in/oussama-ghazouani/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.830-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.74 0-2 1.35-2 2.75V21h-4z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.74 0-2 1.35-2 2.75V21h-4z"/></svg>
           LinkedIn</a>
+        <a class="btn s" href="https://github.com/oussemaghazouani" target="_blank" rel="noopener">GitHub</a>
         <a class="btn s" href="#projects" data-i="cta.work">View my work →</a>
       </div>
     </div>
-    <div class="term" aria-hidden="true">
+    <div class="pcard">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="ph"><img src="photo.jpg" alt="Portrait of Oussama Ghazouani" width="240" height="240"></div>
+      <div class="cap"><b>Oussama Ghazouani</b><span data-i="ph.cap">Software Engineer · ESPRIT graduate</span></div>
+      <div class="float f1"><i>4</i><div><b data-i="fl.1">Internships</b><span>SaaS · Web · AI</span></div></div>
+      <div class="float f2"><i>AI</i><div><b>LLM · RAG · NLP</b><span>Python / FastAPI</span></div></div>
+    </div>
+  </header>
+
+  <div class="stats reveal">
+    <div class="stat"><b>4</b><span data-i="st.1">engineering internships</span></div>
+    <div class="stat"><b>4+</b><span data-i="st.2">full-stack platforms built</span></div>
+    <div class="stat"><b>5</b><span data-i="st.3">certifications (NVIDIA, AWS…)</span></div>
+    <div class="stat"><b>3</b><span data-i="st.4">languages: EN · FR · AR</span></div>
+  </div>
+
+  <section id="about">
+    <p class="eyebrow mono" data-i="ab.eye">// About me</p>
+    <h2 data-i="ab.h">Engineer who ships end-to-end</h2>
+    <div class="about">
+      <div>
+        <p class="txt" data-i="ab.p1">I'm a Computer Engineering graduate from ESPRIT with a background in industrial electronics. I enjoy owning a feature from the database schema to the UI — and making it smarter with AI where it genuinely helps users.</p>
+        <p class="txt" data-i="ab.p2">Across four internships I've built SaaS platforms, secured REST APIs with JWT/OAuth2, worked in Agile Scrum teams and integrated LLM-based services into production-style architectures.</p>
+        <div class="vals">
+          <div class="val"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></i><div><b data-i="v1.h">Robust back ends</b><span data-i="v1">Java / Spring Boot, REST, microservices, security (JWT, OAuth2, Spring Security).</span></div></div>
+          <div class="val"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></i><div><b data-i="v2.h">Clean, responsive UIs</b><span data-i="v2">Angular and React with TypeScript, built for real users and maintainability.</span></div></div>
+          <div class="val"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg></i><div><b data-i="v3.h">Practical AI integration</b><span data-i="v3">Python / FastAPI services: LLMs, RAG chatbots, NLP classification and sentiment analysis.</span></div></div>
+        </div>
+      </div>
+      <div class="term" aria-hidden="true">
       <div class="bar"><i></i><i></i><i></i><em class="mono">engineer.json</em></div>
 <pre class="mono">{
   <span class="k">"name"</span>: <span class="s">"Oussama Ghazouani"</span>,
@@ -203,14 +278,8 @@ footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
   <span class="k">"available"</span>: <span class="n">true</span>  <span class="c">// let's talk</span>
 }</pre>
     </div>
-  </header>
-
-  <div class="stats reveal">
-    <div class="stat"><b>4</b><span data-i="st.1">engineering internships</span></div>
-    <div class="stat"><b>4+</b><span data-i="st.2">full-stack platforms built</span></div>
-    <div class="stat"><b>5</b><span data-i="st.3">certifications (NVIDIA, AWS…)</span></div>
-    <div class="stat"><b>3</b><span data-i="st.4">languages: EN · FR · AR</span></div>
-  </div>
+    </div>
+  </section>
 
   <section id="projects">
     <p class="eyebrow mono" data-i="pr.eye">// Selected work</p>
@@ -272,6 +341,7 @@ footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
         <h3 data-i="p2.h">Client–Provider Project SaaS</h3>
         <p data-i="p2">Collaborative project-management platform between clients and service providers, delivered in Agile Scrum with CI/CD.</p>
         <div class="tags"><span>Spring Boot</span><span>React</span><span>Docker</span><span>OAuth2</span><span>CI/CD</span></div>
+        <a class="code" href="https://github.com/oussemaghazouani/saas-clients-project" target="_blank" rel="noopener" data-i="code">Source code ↗</a>
       </article>
       <article class="pc reveal">
         <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span><span class="yr">2023</span></div>
@@ -319,17 +389,25 @@ footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
     <div class="cta">
       <a class="btn p" href="mailto:oussamaghazouani95@gmail.com">oussamaghazouani95@gmail.com</a>
       <a class="btn s" href="https://www.linkedin.com/in/oussama-ghazouani/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn s" href="https://github.com/oussemaghazouani" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <p style="margin:18px auto 0;font-size:13px;color:var(--dim)"><span data-i="co.cv">Full CV available on request.</span><button class="copy" type="button" data-copy="oussamaghazouani95@gmail.com" data-i="co.copy">Copy email</button></p>
   </div>
 </main>
 
-<footer>© 2026 Oussama Ghazouani · <span data-i="ft">Software Engineer — Tunis, Tunisia</span></footer>
+<footer><div class="flinks"><a href="https://www.linkedin.com/in/oussama-ghazouani/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/oussemaghazouani" target="_blank" rel="noopener">GitHub</a><a href="mailto:oussamaghazouani95@gmail.com">Email</a></div>© 2026 Oussama Ghazouani · <span data-i="ft">Software Engineer — Tunis, Tunisia</span></footer>
 
 <script>
 (()=>{
 const T={
-fr:{"nav.projects":"Projets","nav.exp":"Expérience","nav.skills":"Compétences","nav.certs":"Certifications","nav.hire":"Me contacter",
+fr:{"nav.about":"À propos","ph.cap":"Ingénieur logiciel · diplômé d'ESPRIT","fl.1":"Stages","code":"Code source ↗",
+"ab.eye":"// À propos","ab.h":"Un ingénieur qui livre de bout en bout",
+"ab.p1":"Ingénieur en informatique diplômé d'ESPRIT, avec une formation initiale en électronique industrielle. J'aime prendre en charge une fonctionnalité du schéma de base de données jusqu'à l'interface — et la rendre plus intelligente grâce à l'IA quand elle apporte une vraie valeur.",
+"ab.p2":"Au fil de quatre stages, j'ai construit des plateformes SaaS, sécurisé des API REST (JWT/OAuth2), travaillé en équipes Agile Scrum et intégré des services à base de LLM dans des architectures proches de la production.",
+"v1.h":"Back-ends robustes","v1":"Java / Spring Boot, REST, microservices, sécurité (JWT, OAuth2, Spring Security).",
+"v2.h":"Interfaces claires et responsives","v2":"Angular et React en TypeScript, pensés pour les utilisateurs et la maintenabilité.",
+"v3.h":"IA appliquée","v3":"Services Python / FastAPI : LLM, chatbots RAG, classification NLP et analyse de sentiment.",
+"nav.projects":"Projets","nav.exp":"Expérience","nav.skills":"Compétences","nav.certs":"Certifications","nav.hire":"Me contacter",
 "hero.status":"Disponible · Tunis · Hybride / Télétravail","hero.role":"Ingénieur logiciel Full Stack · Java &amp; Python · IA appliquée",
 "hero.lead":"Ingénieur en informatique diplômé d'ESPRIT. Je conçois des plateformes SaaS, des API REST sécurisées et des microservices avec Spring Boot, Angular et React — et j'intègre l'IA (LLM, RAG, NLP) avec Python et FastAPI.",
 "cta.mail":"M'écrire","cta.work":"Voir mes projets →",

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oussama Ghazouani — Full Stack Software Engineer · Java · Python · AI</title>
+<meta name="description" content="Oussama Ghazouani — Full Stack Software Engineer (Java/Spring Boot, Angular, React, Python/FastAPI) building SaaS platforms and LLM/RAG-powered features. Based in Tunis, open to hybrid and remote roles.">
+<meta property="og:title" content="Oussama Ghazouani — Full Stack Software Engineer">
+<meta property="og:description" content="Java · Spring Boot · Angular · React · Python · FastAPI · LLM & RAG. Open to opportunities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07101f;--bg2:#0b1830;--card:#0f1f3a;--line:#1c2f52;--line2:#26406b;
+  --text:#e6edf7;--muted:#93a4bf;--dim:#62738f;
+  --teal:#5eead4;--teal2:#14b8a6;--blue:#60a5fa;
+  --r:14px;--max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(700px 400px at 85% -5%,rgba(20,184,166,.16),transparent 70%),
+             radial-gradient(600px 420px at 10% 30%,rgba(96,165,250,.09),transparent 70%),
+             radial-gradient(rgba(148,163,184,.10) 1px,transparent 1px) 0 0/22px 22px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(7,16,31,.72);border-bottom:1px solid rgba(38,64,107,.5)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.logo i{font-style:normal;display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--teal2),#2563eb);font-size:13px;font-weight:800;color:#fff}
+.links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.navr{display:flex;gap:10px;align-items:center}
+.lang{background:none;border:1px solid var(--line2);color:var(--text);font:600 12px Inter,sans-serif;padding:7px 11px;border-radius:8px;cursor:pointer}
+.lang:hover{border-color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:11px 18px;border-radius:10px;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn.p{background:var(--teal);color:#042f2e}
+.btn.p:hover{background:#99f6e4}
+.btn.s{border-color:var(--line2);color:var(--text)}
+.btn.s:hover{border-color:var(--teal);color:var(--teal)}
+.btn svg{width:16px;height:16px}
+
+/* hero */
+.hero{padding:88px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--teal);border:1px solid rgba(94,234,212,.3);background:rgba(94,234,212,.06);padding:6px 13px;border-radius:99px}
+.status b{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(94,234,212,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(94,234,212,0)}100%{box-shadow:0 0 0 0 rgba(94,234,212,0)}}
+h1{font-size:clamp(38px,5.4vw,62px);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:22px 0 14px}
+h1 span{background:linear-gradient(90deg,var(--teal),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:20px;font-weight:600;color:#cbd5e1;margin-bottom:16px}
+.lead{color:var(--muted);font-size:17px;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.term{background:linear-gradient(180deg,#0d1b33,#0a1428);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.term .bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#334155}
+.term .bar i:nth-child(1){background:#f87171}.term .bar i:nth-child(2){background:#fbbf24}.term .bar i:nth-child(3){background:#34d399}
+.term .bar em{margin-left:auto;font-style:normal;font-size:12px;color:var(--dim)}
+.term pre{padding:20px 22px;font-size:13.2px;line-height:1.75;color:#cbd5e1;white-space:pre-wrap}
+.k{color:#93c5fd}.s{color:#5eead4}.c{color:var(--dim)}.n{color:#fbbf24}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);background:rgba(15,31,58,.5)}
+.stat{padding:24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em}
+.stat span{font-size:13.5px;color:var(--muted)}
+
+/* sections */
+section{padding:88px 0 0}
+.eyebrow{font-size:12.5px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.025em;line-height:1.15;margin-bottom:12px}
+.sub{color:var(--muted);max-width:620px;margin-bottom:40px}
+
+/* featured case study */
+.case{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:var(--card)}
+.case .info{padding:36px}
+.badge{display:inline-block;font-size:12px;font-weight:600;color:#042f2e;background:var(--teal);padding:4px 10px;border-radius:6px;margin-bottom:16px}
+.case h3{font-size:24px;letter-spacing:-.02em;margin-bottom:6px}
+.case .meta{color:var(--dim);font-size:14px;margin-bottom:18px}
+.case ul{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+.case li{color:#cbd5e1;font-size:15px;padding-left:22px;position:relative}
+.case li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:2px;background:var(--teal);transform:rotate(45deg)}
+.arch{background:#0a1529;border-left:1px solid var(--line);padding:28px;display:flex;align-items:center;justify-content:center}
+.arch svg{width:100%;max-width:440px;height:auto}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-size:12.5px;padding:5px 10px;border-radius:7px;background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.22);color:#bfdbfe}
+
+/* project grid */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.pc{border:1px solid var(--line);background:rgba(15,31,58,.55);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px;transition:.25s}
+.pc:hover{border-color:var(--line2);transform:translateY(-3px)}
+.pc .top{display:flex;justify-content:space-between;align-items:center}
+.pc .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(94,234,212,.1);color:var(--teal)}
+.pc .ic svg{width:20px;height:20px}
+.pc .yr{font-size:12.5px;color:var(--dim)}
+.pc h3{font-size:18px;letter-spacing:-.01em}
+.pc p{color:var(--muted);font-size:14.5px;flex:1}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--teal2),var(--line))}
+.job{position:relative;padding-left:44px}
+.job::before{content:"";position:absolute;left:4px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+.jc{border:1px solid var(--line);background:rgba(15,31,58,.55);border-radius:var(--r);padding:22px 24px}
+.jh{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.jh h3{font-size:17.5px;letter-spacing:-.01em}
+.jh .d{font-size:13px;color:var(--teal);white-space:nowrap}
+.jc .co{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+.jc ul{margin:0 0 14px 18px;color:#cbd5e1;font-size:14.8px;display:grid;gap:5px}
+
+/* skills */
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sk{border:1px solid var(--line);background:rgba(15,31,58,.55);border-radius:var(--r);padding:20px}
+.sk h3{font-size:14px;color:var(--teal);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sk h3::before{content:"";width:6px;height:6px;background:var(--teal);border-radius:2px}
+.sk .tags span{background:rgba(255,255,255,.04);border-color:var(--line2);color:#dbe4f0}
+
+/* certs + edu */
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.list{border:1px solid var(--line);border-radius:var(--r);background:rgba(15,31,58,.55);overflow:hidden}
+.li{display:flex;gap:16px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.li:last-child{border-bottom:0}
+.li i{font-style:normal;flex:none;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:12px;background:rgba(94,234,212,.08);border:1px solid rgba(94,234,212,.25);color:var(--teal)}
+.li b{display:block;font-size:14.8px;font-weight:600}
+.li span{font-size:13px;color:var(--dim)}
+.edu{padding:22px;border-bottom:1px solid var(--line)}
+.edu:last-child{border-bottom:0}
+.edu b{display:block;font-size:15.5px}
+.edu p{color:var(--muted);font-size:14px}
+.edu span{font-size:13px;color:var(--teal)}
+.lg{display:flex;justify-content:space-between;padding:13px 22px;border-top:1px solid var(--line);font-size:14.5px}
+.lg em{font-style:normal;color:var(--muted)}
+
+/* contact */
+.contact{margin:96px 0 0;border:1px solid var(--line2);border-radius:20px;padding:56px;text-align:center;background:radial-gradient(500px 220px at 50% 0%,rgba(20,184,166,.16),transparent 70%),var(--card)}
+.contact h2{margin-bottom:10px}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 28px}
+.contact .cta{justify-content:center;margin-top:0}
+.copy{background:none;border:0;color:var(--dim);font:500 12px Inter,sans-serif;cursor:pointer;margin-left:6px}
+footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:.6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.status b{animation:none}}
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:56px}
+  .case{grid-template-columns:1fr}.arch{border-left:0;border-top:1px solid var(--line)}
+  .grid3{grid-template-columns:1fr 1fr}.sg{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .links{display:none}
+}
+@media (max-width:600px){nav .btn.p{display:none}.logo{white-space:nowrap}.grid3,.sg{grid-template-columns:1fr}.contact{padding:36px 22px}.case .info{padding:26px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo"><i>OG</i>Oussama Ghazouani</a>
+  <div class="links">
+    <a href="#projects" data-i="nav.projects">Projects</a>
+    <a href="#experience" data-i="nav.exp">Experience</a>
+    <a href="#skills" data-i="nav.skills">Skills</a>
+    <a href="#certs" data-i="nav.certs">Certifications</a>
+  </div>
+  <div class="navr">
+    <button class="lang" id="lang" type="button" aria-label="Switch language">FR</button>
+    <a class="btn p" href="#contact" data-i="nav.hire">Contact me</a>
+  </div>
+</div></nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <span class="status"><b></b><span data-i="hero.status">Open to opportunities · Tunis · Hybrid / Remote</span></span>
+      <h1>Oussama<br><span>Ghazouani</span></h1>
+      <p class="role" data-i="hero.role">Full Stack Software Engineer · Java &amp; Python · Applied AI</p>
+      <p class="lead" data-i="hero.lead">Computer Engineer from ESPRIT. I design and build SaaS platforms, secure REST APIs and microservices with Spring Boot, Angular and React — and ship AI features (LLM, RAG, NLP) with Python and FastAPI.</p>
+      <div class="cta">
+        <a class="btn p" href="mailto:oussamaghazouani95@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span data-i="cta.mail">Email me</span></a>
+        <a class="btn s" href="https://www.linkedin.com/in/oussama-ghazouani/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.830-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.74 0-2 1.35-2 2.75V21h-4z"/></svg>
+          LinkedIn</a>
+        <a class="btn s" href="#projects" data-i="cta.work">View my work →</a>
+      </div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><em class="mono">engineer.json</em></div>
+<pre class="mono">{
+  <span class="k">"name"</span>: <span class="s">"Oussama Ghazouani"</span>,
+  <span class="k">"role"</span>: <span class="s">"Full Stack Software Engineer"</span>,
+  <span class="k">"backend"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"Node.js"</span>, <span class="s">"FastAPI"</span>],
+  <span class="k">"frontend"</span>: [<span class="s">"Angular"</span>, <span class="s">"React"</span>, <span class="s">"TypeScript"</span>],
+  <span class="k">"ai"</span>: [<span class="s">"LLM"</span>, <span class="s">"RAG"</span>, <span class="s">"NLP"</span>, <span class="s">"Hugging Face"</span>],
+  <span class="k">"devops"</span>: [<span class="s">"Docker"</span>, <span class="s">"Kubernetes"</span>, <span class="s">"CI/CD"</span>, <span class="s">"Azure"</span>],
+  <span class="k">"internships"</span>: <span class="n">4</span>,
+  <span class="k">"available"</span>: <span class="n">true</span>  <span class="c">// let's talk</span>
+}</pre>
+    </div>
+  </header>
+
+  <div class="stats reveal">
+    <div class="stat"><b>4</b><span data-i="st.1">engineering internships</span></div>
+    <div class="stat"><b>4+</b><span data-i="st.2">full-stack platforms built</span></div>
+    <div class="stat"><b>5</b><span data-i="st.3">certifications (NVIDIA, AWS…)</span></div>
+    <div class="stat"><b>3</b><span data-i="st.4">languages: EN · FR · AR</span></div>
+  </div>
+
+  <section id="projects">
+    <p class="eyebrow mono" data-i="pr.eye">// Selected work</p>
+    <h2 data-i="pr.h">Projects that ship real features</h2>
+    <p class="sub" data-i="pr.sub">From AI-driven customer support to logistics, each project covers the full lifecycle: architecture, APIs, UI, security and deployment.</p>
+
+    <article class="case reveal">
+      <div class="info">
+        <span class="badge" data-i="cs.badge">Featured · Final-year project</span>
+        <h3 data-i="cs.h">AI-Powered Support Ticketing SaaS</h3>
+        <p class="meta">Kicksoft Studio · Tunis Technopole · 2026</p>
+        <ul>
+          <li data-i="cs.1">SaaS platform for intelligent customer-support ticket management — Spring Boot, Angular, MySQL, JWT.</li>
+          <li data-i="cs.2">Python/FastAPI AI microservice: zero-shot ticket classification, sentiment analysis (Hugging Face) and reply suggestions for agents.</li>
+          <li data-i="cs.3">Customer chatbot on a RAG architecture powered by the Claude API, evaluated on a Kaggle dataset.</li>
+        </ul>
+        <div class="tags"><span>Spring Boot</span><span>Angular</span><span>MySQL</span><span>JWT</span><span>FastAPI</span><span>Hugging Face</span><span>LLM</span><span>RAG</span></div>
+      </div>
+      <div class="arch">
+        <svg viewBox="0 0 440 300" font-family="Inter,sans-serif" font-size="12" role="img" aria-label="Architecture: Angular client, Spring Boot API with MySQL, FastAPI AI microservice with NLP models and RAG over the Claude API">
+          <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5eead4"/></marker></defs>
+          <g fill="#0f1f3a" stroke="#26406b">
+            <rect x="150" y="10" width="140" height="44" rx="10"/>
+            <rect x="150" y="116" width="140" height="48" rx="10" stroke="#5eead4"/>
+            <rect x="10" y="226" width="120" height="44" rx="10"/>
+            <rect x="160" y="226" width="120" height="44" rx="10" stroke="#5eead4"/>
+            <rect x="310" y="226" width="120" height="44" rx="10"/>
+          </g>
+          <g fill="#e6edf7" text-anchor="middle" font-weight="600">
+            <text x="220" y="31">Angular SPA</text>
+            <text x="220" y="138">Spring Boot API</text>
+            <text x="70" y="247">MySQL</text>
+            <text x="220" y="247">FastAPI · AI</text>
+            <text x="370" y="247">Claude API · RAG</text>
+          </g>
+          <g fill="#93a4bf" text-anchor="middle" font-size="10.5">
+            <text x="220" y="45">agents &amp; customers</text>
+            <text x="220" y="153">JWT · REST</text>
+            <text x="70" y="261">tickets · users</text>
+            <text x="220" y="261">zero-shot · sentiment</text>
+            <text x="370" y="261">chatbot</text>
+          </g>
+          <g stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#a)">
+            <path d="M220 54V114"/><path d="M190 164L85 224"/><path d="M220 164V224"/><path d="M280 248H308"/>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <div class="grid3">
+      <article class="pc reveal">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><span class="yr">2024 – 2025</span></div>
+        <h3>Speedy GO</h3>
+        <p data-i="p1">Transport &amp; logistics platform: order management, delivery tracking and a secured REST API.</p>
+        <div class="tags"><span>Spring Boot</span><span>Angular</span><span>MySQL</span><span>REST</span><span>JWT</span></div>
+      </article>
+      <article class="pc reveal">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M7 9h4M7 13h10"/></svg></span><span class="yr">2024</span></div>
+        <h3 data-i="p2.h">Client–Provider Project SaaS</h3>
+        <p data-i="p2">Collaborative project-management platform between clients and service providers, delivered in Agile Scrum with CI/CD.</p>
+        <div class="tags"><span>Spring Boot</span><span>React</span><span>Docker</span><span>OAuth2</span><span>CI/CD</span></div>
+      </article>
+      <article class="pc reveal">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span><span class="yr">2023</span></div>
+        <h3 data-i="p3.h">Gym Management App</h3>
+        <p data-i="p3">Members, memberships and class scheduling for a fitness club, with an Angular front end and Spring Boot back end.</p>
+        <div class="tags"><span>Angular</span><span>TypeScript</span><span>Spring Boot</span><span>MySQL</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow mono" data-i="ex.eye">// Experience</p>
+    <h2 data-i="ex.h">Where I've built software</h2>
+    <p class="sub" data-i="ex.sub">Four engineering internships across SaaS, enterprise web apps and hardware.</p>
+    <div class="tl" id="jobs"></div>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow mono" data-i="sk.eye">// Tech stack</p>
+    <h2 data-i="sk.h">Skills</h2>
+    <p class="sub" data-i="sk.sub">Strongest in Java/Spring Boot + Angular/React, with Python for AI services.</p>
+    <div class="sg" id="sk"></div>
+  </section>
+
+  <section id="certs">
+    <p class="eyebrow mono" data-i="ce.eye">// Credentials</p>
+    <h2 data-i="ce.h">Certifications &amp; education</h2>
+    <p class="sub"></p>
+    <div class="two">
+      <div class="list" id="cl"></div>
+      <div class="list">
+        <div class="edu"><span>2023 – 2026</span><b data-i="ed.1">Engineer's degree, Computer Engineering</b><p>ESPRIT — École Supérieure Privée d'Ingénierie et de Technologies</p></div>
+        <div class="edu"><span>2019 – 2022</span><b data-i="ed.2">Bachelor's degree, Industrial Electronics</b><p data-i="ed.2p">University of Monastir</p></div>
+        <div class="lg"><span data-i="lg.ar">Arabic</span><em data-i="lg.n">Native</em></div>
+        <div class="lg"><span data-i="lg.fr">French</span><em data-i="lg.p">Professional working (B2)</em></div>
+        <div class="lg"><span data-i="lg.en">English</span><em data-i="lg.p2">Professional working (B2)</em></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact reveal" id="contact">
+    <p class="eyebrow mono">// contact</p>
+    <h2 data-i="co.h">Let's build something together</h2>
+    <p data-i="co.p">Looking for a Full Stack / Software Engineer role (Java, Python, AI). Available now — on-site in Tunis, hybrid or fully remote.</p>
+    <div class="cta">
+      <a class="btn p" href="mailto:oussamaghazouani95@gmail.com">oussamaghazouani95@gmail.com</a>
+      <a class="btn s" href="https://www.linkedin.com/in/oussama-ghazouani/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <p style="margin:18px auto 0;font-size:13px;color:var(--dim)"><span data-i="co.cv">Full CV available on request.</span><button class="copy" type="button" data-copy="oussamaghazouani95@gmail.com" data-i="co.copy">Copy email</button></p>
+  </div>
+</main>
+
+<footer>© 2026 Oussama Ghazouani · <span data-i="ft">Software Engineer — Tunis, Tunisia</span></footer>
+
+<script>
+(()=>{
+const T={
+fr:{"nav.projects":"Projets","nav.exp":"Expérience","nav.skills":"Compétences","nav.certs":"Certifications","nav.hire":"Me contacter",
+"hero.status":"Disponible · Tunis · Hybride / Télétravail","hero.role":"Ingénieur logiciel Full Stack · Java &amp; Python · IA appliquée",
+"hero.lead":"Ingénieur en informatique diplômé d'ESPRIT. Je conçois des plateformes SaaS, des API REST sécurisées et des microservices avec Spring Boot, Angular et React — et j'intègre l'IA (LLM, RAG, NLP) avec Python et FastAPI.",
+"cta.mail":"M'écrire","cta.work":"Voir mes projets →",
+"st.1":"stages d'ingénieur","st.2":"plateformes full stack réalisées","st.3":"certifications (NVIDIA, AWS…)","st.4":"langues : AR · FR · EN",
+"pr.eye":"// Projets","pr.h":"Des projets qui livrent de vraies fonctionnalités","pr.sub":"Du support client piloté par l'IA à la logistique : chaque projet couvre tout le cycle — architecture, API, interface, sécurité et déploiement.",
+"cs.badge":"À la une · Projet de fin d'études","cs.h":"Plateforme SaaS de ticketing intelligent",
+"cs.1":"Plateforme SaaS de gestion intelligente des tickets de support — Spring Boot, Angular, MySQL, JWT.",
+"cs.2":"Microservice IA en Python/FastAPI : classification zero-shot, analyse de sentiment (Hugging Face) et suggestions de réponses.",
+"cs.3":"Chatbot client à architecture RAG propulsé par l'API Claude, évalué sur un jeu de données Kaggle.",
+"p1":"Plateforme de transport et de logistique : gestion des commandes, suivi des livraisons et API REST sécurisée.",
+"p2.h":"SaaS clients–prestataires","p2":"Plateforme collaborative de gestion de projets entre clients et prestataires, menée en Agile Scrum avec CI/CD.",
+"p3.h":"Gestion de salle de sport","p3":"Membres, abonnements et planning des cours, avec un front Angular et un back Spring Boot.",
+"ex.eye":"// Expérience","ex.h":"Là où j'ai développé","ex.sub":"Quatre stages d'ingénieur : SaaS, applications web d'entreprise et matériel.",
+"sk.eye":"// Stack technique","sk.h":"Compétences","sk.sub":"Points forts : Java/Spring Boot + Angular/React, avec Python pour les services IA.",
+"ce.eye":"// Diplômes","ce.h":"Certifications &amp; formation",
+"ed.1":"Diplôme d'ingénieur en informatique","ed.2":"Licence en électronique industrielle","ed.2p":"Université de Monastir",
+"lg.ar":"Arabe","lg.n":"Langue maternelle","lg.fr":"Français","lg.p":"Professionnel (B2)","lg.en":"Anglais","lg.p2":"Professionnel (B2)",
+"co.h":"Construisons quelque chose ensemble","co.p":"Je recherche un poste d'ingénieur logiciel / Full Stack (Java, Python, IA). Disponible immédiatement — sur site à Tunis, en hybride ou en télétravail.",
+"co.cv":"CV complet sur demande.","co.copy":"Copier l'e-mail","ft":"Ingénieur logiciel — Tunis, Tunisie"}
+};
+const jobs=[
+ {d:["Feb 2026 – Aug 2026","févr. 2026 – août 2026"],t:["Software Engineer Intern — Final-Year Project (Full Stack & AI)","Ingénieur logiciel stagiaire — PFE (Full Stack & IA)"],c:"Kicksoft Studio · Tunis Technopole",
+  b:[["Built a SaaS platform for intelligent support-ticket management (Spring Boot, Angular, MySQL, JWT).","Plateforme SaaS de gestion intelligente des tickets de support (Spring Boot, Angular, MySQL, JWT)."],
+     ["Developed a FastAPI AI microservice: zero-shot classification, sentiment analysis, reply suggestions.","Microservice IA FastAPI : classification zero-shot, analyse de sentiment, suggestions de réponses."],
+     ["Shipped a RAG chatbot on the Claude API, evaluated on a Kaggle dataset.","Chatbot RAG sur l'API Claude, évalué sur un jeu de données Kaggle."]],g:["Spring Boot","Angular","FastAPI","LLM","RAG"]},
+ {d:["Jul 2025 – Sep 2025","juil. 2025 – sept. 2025"],t:["Full Stack Software Engineer Intern","Ingénieur logiciel Full Stack stagiaire"],c:"BrandWood&Co · Tunis",
+  b:[["Developed a SaaS platform to manage and analyse client projects.","Plateforme SaaS de gestion et d'analyse des projets clients."],
+     ["Built fast, secure REST APIs with Spring Boot and JWT authentication.","API REST performantes et sécurisées avec Spring Boot et JWT."]],g:["Java","Spring Boot","React","MySQL","Postman"]},
+ {d:["Jul 2024 – Sep 2024","juil. 2024 – sept. 2024"],t:["Web Software Engineer Intern","Ingénieur logiciel Web stagiaire"],c:"InfraPlus · Ben Arous",
+  b:[["Built a web application for fixed-asset and inventory management.","Application web de gestion des immobilisations et des inventaires."],
+     ["Implemented multi-role authentication and a secure back office.","Authentification multi-rôles et back-office sécurisé."]],g:["Symfony","PHP","Twig","Bootstrap","MySQL"]},
+ {d:["Feb 2022 – Jul 2022","févr. 2022 – juil. 2022"],t:["Engineering Intern — Solar Tracking System","Ingénieur stagiaire — système de suivi solaire"],c:"STIA · Ben Arous",
+  b:[["Designed and optimised a solar tracking system.","Conception et optimisation d'un système de suivi solaire."],
+     ["Selected electrical components and designed the tracker's mechanics.","Choix des composants électriques et conception mécanique."]],g:["Electronics","Embedded","Mechanical design"]}
+];
+const skills=[
+ [["Back-end","Back-end"],["Java","Spring Boot","Spring Security","Node.js","Express.js","FastAPI",".NET Core","PHP / Symfony"]],
+ [["Front-end","Front-end"],["Angular","React","TypeScript","JavaScript","HTML5","CSS3","Bootstrap"]],
+ [["AI & NLP","IA & NLP"],["LLM (Claude API)","RAG","NLP","Hugging Face","Zero-shot","Deep Learning","Machine Learning"]],
+ [["Architecture","Architecture"],["REST APIs","Microservices","SaaS","JWT","OAuth2","Keycloak"]],
+ [["Databases","Bases de données"],["MySQL","PostgreSQL","MongoDB","SQL Server"]],
+ [["DevOps & Cloud","DevOps & Cloud"],["Docker","Kubernetes","CI/CD","Azure","AWS (Academy)","Grafana"]],
+ [["Languages","Langages"],["Java","Python","TypeScript","JavaScript","C#"]],
+ [["Tools & method","Outils & méthode"],["Git / GitHub","Postman","Maven","npm","IntelliJ","VS Code","Agile Scrum"]]
+];
+const certs=[
+ ["NV","NVIDIA — Applications of AI for Anomaly Detection",["Nov 2025","nov. 2025"]],
+ ["NV","NVIDIA — Fundamentals of Deep Learning",["Mar 2025","mars 2025"]],
+ ["NV","NVIDIA — Building Transformer-Based NLP Applications",["NLP · Transformers","NLP · Transformers"]],
+ ["AWS","AWS Academy Graduate — Cloud Foundations",["Jul 2025","juil. 2025"]],
+ ["H","Hashgraph Developer — Certificate of Completion",["Nov 2025","nov. 2025"]]
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let lang="en";
+const render=()=>{
+  const i=lang==="en"?0:1;
+  document.getElementById("jobs").innerHTML=jobs.map(j=>`<div class="job reveal on"><div class="jc"><div class="jh"><h3>${esc(j.t[i])}</h3><span class="d mono">${esc(j.d[i])}</span></div><p class="co">${esc(j.c)}</p><ul>${j.b.map(b=>`<li>${esc(b[i])}</li>`).join("")}</ul><div class="tags">${j.g.map(g=>`<span>${esc(g)}</span>`).join("")}</div></div></div>`).join("");
+  document.getElementById("sk").innerHTML=skills.map(s=>`<div class="sk"><h3>${esc(s[0][i])}</h3><div class="tags">${s[1].map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`).join("");
+  document.getElementById("cl").innerHTML=certs.map(c=>`<div class="li"><i>${esc(c[0])}</i><div><b>${esc(c[1])}</b><span>${esc(c[2][i])}</span></div></div>`).join("");
+};
+const apply=()=>{
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;
+    const v=lang==="fr"?T.fr[el.dataset.i]:null;
+    el.innerHTML=v!=null?v:el.dataset.en;
+  });
+  document.documentElement.lang=lang;
+  document.getElementById("lang").textContent=lang==="en"?"FR":"EN";
+  render();
+};
+document.getElementById("lang").addEventListener("click",()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("og-lang",lang)}catch(e){}apply()});
+try{const s=localStorage.getItem("og-lang");if(s==="fr"||s==="en")lang=s}catch(e){}
+document.addEventListener("click",e=>{const b=e.target.closest(".copy");if(!b)return;try{navigator.clipboard.writeText(b.dataset.copy).then(()=>{const o=b.innerHTML;b.textContent="✓";setTimeout(()=>{b.innerHTML=o},1400)},()=>{})}catch(err){}});
+apply();
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.12}):null;
+document.querySelectorAll(".reveal").forEach(el=>io?io.observe(el):el.classList.add("on"));
+})();
+</script>
+</body>
+</html>
